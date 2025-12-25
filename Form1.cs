@@ -105,7 +105,7 @@ namespace NotePad
                 {
                     return;
                 }
-            }
+            } 
             Application.Exit();
         }
 
