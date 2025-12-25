@@ -206,6 +206,28 @@ namespace NotePad
             TextCopied();
         }
 
-       
+        private bool _wordWrapEnabled = true;
+        private void wordwrapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _wordWrapEnabled = !_wordWrapEnabled;
+            AllNote.WordWrap = _wordWrapEnabled;
+            wordwrapToolStripMenuItem.Checked = _wordWrapEnabled;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            AllNote.WordWrap = true;
+            wordwrapToolStripMenuItem.Checked = true;
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog font = new FontDialog();
+            font.Font = AllNote.Font;
+            if(font.ShowDialog() == DialogResult.OK)
+            {
+                AllNote.Font = font.Font;
+            }
+        }
     }
 }

@@ -43,6 +43,9 @@
             this.Paste = new System.Windows.Forms.ToolStripMenuItem();
             this.SelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.AllNote = new System.Windows.Forms.TextBox();
+            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordwrapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +53,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.formatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -73,42 +77,42 @@
             // OpenFile
             // 
             this.OpenFile.Name = "OpenFile";
-            this.OpenFile.Size = new System.Drawing.Size(180, 22);
+            this.OpenFile.Size = new System.Drawing.Size(124, 22);
             this.OpenFile.Text = "Open";
             this.OpenFile.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // NewFile
             // 
             this.NewFile.Name = "NewFile";
-            this.NewFile.Size = new System.Drawing.Size(180, 22);
+            this.NewFile.Size = new System.Drawing.Size(124, 22);
             this.NewFile.Text = "New File";
             this.NewFile.Click += new System.EventHandler(this.NewFile_Click);
             // 
             // OpenFileFromPc
             // 
             this.OpenFileFromPc.Name = "OpenFileFromPc";
-            this.OpenFileFromPc.Size = new System.Drawing.Size(180, 22);
+            this.OpenFileFromPc.Size = new System.Drawing.Size(124, 22);
             this.OpenFileFromPc.Text = "Open File";
             this.OpenFileFromPc.Click += new System.EventHandler(this.OpenFileFromPc_Click);
             // 
             // SsaveAss
             // 
             this.SsaveAss.Name = "SsaveAss";
-            this.SsaveAss.Size = new System.Drawing.Size(180, 22);
+            this.SsaveAss.Size = new System.Drawing.Size(124, 22);
             this.SsaveAss.Text = "Save As";
             this.SsaveAss.Click += new System.EventHandler(this.SsaveAss_Click);
             // 
             // Save
             // 
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(180, 22);
+            this.Save.Size = new System.Drawing.Size(124, 22);
             this.Save.Text = "Save";
             this.Save.Click += new System.EventHandler(this.Save_Click_1);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(124, 22);
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -172,6 +176,29 @@
             this.AllNote.TextChanged += new System.EventHandler(this.AllNote_TextChanged);
             this.AllNote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllNote_KeyPress);
             // 
+            // formatToolStripMenuItem
+            // 
+            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordwrapToolStripMenuItem,
+            this.fontToolStripMenuItem});
+            this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.formatToolStripMenuItem.Text = "Format";
+            // 
+            // wordwrapToolStripMenuItem
+            // 
+            this.wordwrapToolStripMenuItem.Name = "wordwrapToolStripMenuItem";
+            this.wordwrapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wordwrapToolStripMenuItem.Text = "Wordwrap";
+            this.wordwrapToolStripMenuItem.Click += new System.EventHandler(this.wordwrapToolStripMenuItem_Click);
+            // 
+            // fontToolStripMenuItem
+            // 
+            this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +209,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,6 +235,9 @@
         private System.Windows.Forms.ToolStripMenuItem Save;
         private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.ToolStripMenuItem SsaveAss;
+        private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wordwrapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
     }
 }
 
